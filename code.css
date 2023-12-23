@@ -1,0 +1,426 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:hsla(0,100%,50%,1);
+    background-image:
+    radial-gradient(at 40% 20%, hsla(267,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(68,100%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(234,100%,93%,1) 0px, transparent 50%),
+    radial-gradient(at 4% 77%, hsla(219,100%,76%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(261,100%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(121,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(222,100%,76%,1) 0px, transparent 50%);
+}
+
+#capcha-code{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.page-capcha{
+    width: 23%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 15px 20px 20px rgb(0, 0, 0,0.3);
+}
+.page-capcha h2{
+    text-align: center;
+}
+
+
+.code{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    background-color: #e4e4e4;
+    margin-top: 20px;
+    overflow-x: auto;
+    border-radius: 5px; 
+}
+table{
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+table td{
+    margin-left: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+.code a{
+    padding: 10px;
+    border-left: 4px solid #f1f1f1;
+    text-align: right;
+  
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.page-capcha form{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.page-capcha input,button{
+  margin-top: 20px;
+}
+.page-capcha input{
+    padding: 10px;
+    border: 2px solid #d4d4d4;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.page-capcha button{
+    padding:10px 0 ;
+    font-size: 15px;
+    background-color: rgb(217, 141, 255);
+    border-radius: 5px;
+    outline: none;
+    border: transparent;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+#open-list{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 25px;
+    color: #000;
+}
+#header1 .ulelem{
+    height: 100vh;
+    width: 150px;
+    background-color:hsla(0,100%,50%,1);
+    background-image:
+    radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355,80%,57%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    padding: 40px 0 0 40px;
+    position: fixed;
+    left:-200px;
+    transition: 0.3s ease;
+}
+#close{
+   position: absolute;
+   top: 20px;
+   right: 40px;
+   text-decoration: none;
+   color:#000;
+   font-size: 20px;
+}
+.ulelem li{
+    list-style-type: none;
+    padding-top: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+}
+
+.ulelem li:hover{
+    cursor: pointer;
+}
+.ulelem li:hover:after{
+    content: '';
+    width: 30%;
+    height: 1.5px;
+    background-color:  darkorchid;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+#audio-speech{
+    display: flex;
+    justify-content: center;
+}
+.form-audio{
+    text-align: center;
+    width: 23%;
+    background-color: #dadada;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 15px 20px 20px rgb(0, 0, 0,0.3);
+}
+.form-audio h2{
+    padding: 4px 0 ;
+}
+
+.form-audio textarea{
+  border-radius: 5px;
+  border: 4px solid #cccaca;
+  outline: none;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.form-audio button{
+    padding:10px 0 ;
+    font-size: 15px;
+    background-color: rgb(217, 141, 255);
+    border-radius: 5px;
+    outline: none;
+    border: transparent;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+#joke-box{
+display: flex;
+justify-content: center;
+}
+.joke{
+    margin-top: 50px;
+    width: 40%;
+    background-color: #181717;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 15px 20px 25px rgb(0, 0, 0,0.3);
+}
+.joke h1{
+ font-size: 90px;
+ margin-bottom: 10px;
+}
+.joke p{
+    font-size: 18px;
+    color: #f1f1f1;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.joke button{
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: gold;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#jahan-nama{
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.jahan-box{
+    width: 40%;
+    background-color: #dbdbdb;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 15px 20px 25px rgb(0, 0, 0,0.3);
+}
+.jahan-box form{
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+}
+.jahan-box form input{
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0 3px 5px;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+    border-bottom: 3px solid rgb(36, 36, 255);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-weight: 600;
+    
+}
+.jahan-box form button{
+    padding: 10px 30px;
+    font-size: 15px;
+    background-color:rgb(36, 36, 255) ;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    outline: none;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+.jahan-box .flag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flag img{
+    width: 300px;
+    height: 200px;
+    padding-bottom: 20px;
+}
+.flag h1{
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.country-info{
+   padding-bottom: 30px;
+}
+.country-info h4{
+    padding-bottom: 15px;
+    color: #1b1b1b;
+}
+.country-info span{
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+
+
+
+
+
+
+#abhava{
+    margin: 100px auto 0 auto;
+    width: 400px;
+    position: relative;
+}
+
+.ab-hava-box{
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+#abhava .top{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top:20px;
+    right: -80px;
+    z-index: -1;
+    background-color: blueviolet;
+    
+}
+
+#abhava .boton{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px;
+    left:-50px;
+    z-index: -1;
+
+    background-color:hsla(0,100%,50%,1);
+    background-image:
+    radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355,80%,57%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    
+}
+
+.form-search{
+    display: flex;
+}
+
+.form-search input{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #3b3b3b;
+}
+.form-search button{
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid #d4d4d4;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.form-search button:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#result h2{
+    padding: 20px 10px;
+}
+
+
+#result img{
+    padding-top: 10px;
+}
+
+#result h1{
+    font-size: 35px;
+}
+
+#result .min-max{
+    display: flex;
+    margin-top: 20px;
+}
+
+.min-max .min{
+    margin-right: 13px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.min-max .center-border{
+    width: 2px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.min-max .max{
+    margin-left: 13px;
+    font-size: 17px;
+    text-align: center;
+}
